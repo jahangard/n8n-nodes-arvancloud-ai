@@ -1,0 +1,63 @@
+{
+  "name": "n8n-nodes-arvan-ai",
+  "version": "0.1.0",
+  "description": "n8n community nodes for ArvanCloud AIaaS, including Chat Completions and an AI Agent compatible Chat Model.",
+  "license": "MIT",
+  "homepage": "https://docs.arvancloud.ir/fa/aiaas/api-usage/",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "arvancloud",
+    "arvan",
+    "ai",
+    "aiaas",
+    "llm",
+    "chat-model",
+    "openai-compatible",
+    "iran"
+  ],
+  "author": {
+    "name": "Mehdi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/n8n-nodes-arvan-ai.git"
+  },
+  "scripts": {
+    "build": "n8n-node build",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "prepublishOnly": "n8n-node prerelease"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "aiNodeSdkVersion": 1,
+    "strict": true,
+    "credentials": [
+      "dist/credentials/ArvanAiApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/ArvanAi/ArvanAi.node.js",
+      "dist/nodes/ArvanChatModel/ArvanChatModel.node.js"
+    ]
+  },
+  "peerDependencies": {
+    "@n8n/ai-node-sdk": "*",
+    "n8n-workflow": "*"
+  },
+  "devDependencies": {
+    "@n8n/ai-node-sdk": "*",
+    "@n8n/node-cli": "*",
+    "eslint": "^9.39.4",
+    "n8n-workflow": "*",
+    "prettier": "^3.8.3",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20.15.0"
+  }
+}
